@@ -1,0 +1,29 @@
+patch_size: 16
+stride: 4
+algos:
+  compressed:
+    folder: '/Users/roman/vkr/data/decoded_qp_37'
+    fmt: '420'
+  qecnn:
+    folder: '/Users/roman/vkr/data/results_37/QECNN'
+    fmt: '420'
+  qg_lstm:
+    folder: '/Users/roman/vkr/data/results_37/QG-ConvLSTM'
+    fmt: '400'
+  mfqe:
+    folder: '/Users/roman/vkr/data/results_37/MFQE'
+    fmt: '400'
+  aggregated:
+    folder: '/Users/roman/vkr/data/results_37/aggregated'
+    fmt: '400'
+#      mw-gan:
+#        folder: '/Users/roman/vkr/data/results/MW-GAN'
+#        fmt: '420'
+model:
+  channels: 4
+  patch_size: 16
+  num_features: 60
+  num_cnn_layers: 3
+  num_blocks: 2
+  dropout: 0.35
+

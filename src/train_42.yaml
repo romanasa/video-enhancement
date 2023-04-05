@@ -1,0 +1,68 @@
+datasets:
+  train:
+    type: MultiAlgoDataset
+    height: 288
+    width: 352
+    aug: True
+    algos:
+      compressed:
+        folder: '/root/data/decoded_qp_42'
+        fmt: '420'
+      qecnn:
+        folder: '/root/data/results_42/QECNN'
+        fmt: '420'
+      qg_lstm:
+        folder: '/root/data/results_42/QG-ConvLSTM'
+        fmt: '400'
+      mfqe:
+        folder: '/root/data/results_42/MFQE'
+        fmt: '400'
+      stdf:
+        folder: '/root/data/results_42/STDF'
+        fmt: '400'
+      rfda:
+        folder: '/root/data/results_42/RFDA'
+        fmt: '400'
+    raw:
+      folder: '/root/data/raw_train/'
+      fmt: '420'
+    batch_size: 4096
+  valid:
+    type: MultiAlgoDataset
+    height: 288
+    width: 352
+    aug: False
+    algos:
+      compressed:
+        folder: '/root/data/decoded_qp_42'
+        fmt: '420'
+      qecnn:
+        folder: '/root/data/results_42/QECNN'
+        fmt: '420'
+      qg_lstm:
+        folder: '/root/data/results_42/QG-ConvLSTM'
+        fmt: '400'
+      mfqe:
+        folder: '/root/data/results_42/MFQE'
+        fmt: '400'
+      stdf:
+        folder: '/root/data/results_42/STDF'
+        fmt: '400'
+      rfda:
+        folder: '/root/data/results_42/RFDA'
+        fmt: '400'
+    raw:
+      folder: '/root/data/raw_valid/'
+      fmt: '420'
+    batch_size: 1
+model:
+  channels: 5
+  patch_size: 16
+  num_features: 100
+  num_cnn_layers: 2
+  num_blocks: 2
+  dropout: 0.2
+training_params:
+  lr: 0.0005
+  num_epochs: 100
+

@@ -1,0 +1,29 @@
+patch_size: 16
+stride: 4
+algos:
+  compressed:
+    folder: '/Users/roman/vkr/data/decoded_qp_42'
+    fmt: '420'
+  qecnn:
+    folder: '/Users/roman/vkr/data/results_42/QECNN'
+    fmt: '420'
+  qg_lstm:
+    folder: '/Users/roman/vkr/data/results_42/QG-ConvLSTM'
+    fmt: '400'
+  mfqe:
+    folder: '/Users/roman/vkr/data/results_42/MFQE'
+    fmt: '400'
+  stdf:
+    folder: '/Users/roman/vkr/data/results_42/STDF'
+    fmt: '400'
+  rfda:
+    folder: '/Users/roman/vkr/data/results_42/RFDA'
+    fmt: '400'
+model:
+  channels: 5
+  patch_size: 16
+  num_features: 100
+  num_cnn_layers: 4
+  num_blocks: 2
+  dropout: 0.3
+
